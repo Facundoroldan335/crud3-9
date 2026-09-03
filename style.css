@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, black, grey, white);
+    background-attachment: fixed;
+}
+
+h1, h2{
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: blue;
+}
+
+.res{
+    padding: 5px;
+    margin: 3px;
+    border-radius: 6px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.agregado{
+    color: yellow;
+}
+
+.editado{
+    color: rgb(249, 7, 160);
+}
+
+.eliminado{
+    color: red;
+}
+
+.error{
+    color: white;
+}
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 300px;
+    gap: 15px;
+    padding: 10px;
+    background-color: #2F2F2F;
+    color: white;
+    margin: 20px auto;
+    border-radius: 8px;
+}
+input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+label{
+    width: 70%;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.btn-submit{
+    background-color: #ffede5;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color:#D6D6D6;
+    border-radius: 8px;
+}
+
