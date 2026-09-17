@@ -27,7 +27,6 @@ a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .agregado{
     color: yellow;
@@ -44,23 +43,36 @@ a:hover{
 .error{
     color: white;
 }
+
 .form {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    width: 300px;
-    gap: 15px;
-    padding: 10px;
-    background-color: #2F2F2F;
-    color: white;
-    margin: 20px auto;
-    border-radius: 8px;
+    align-items: center;   
+    justify-content: center;
+    gap: 15px;             
+    min-height: 100vh;      
 }
-input{
+
+input {
+    width: 250px;
     padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+button{
+    width: 250px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover{
+    background-color: #333;
 }
 
 label{
@@ -77,7 +89,6 @@ label{
     border-radius: 5px;
     cursor: pointer;
 }
-
 
 .productos {
     display: grid;
@@ -96,3 +107,8 @@ label{
     border-radius: 8px;
 }
 
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

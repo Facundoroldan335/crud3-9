@@ -1,19 +1,13 @@
 <?php
-require "conexion.php";
-$resultado = $conexion->query('SELECT * FROM productos');
-
-$res = $_GET["res"] ?? "";
+    require "conexion.php";
+    $resultado = $conexion->query('SELECT * FROM productos');
+    $res = $_GET["res"] ?? "";
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Crud PHP</title>
-</head>
+<?php require "partials/header.php";
+    require "partials/footer.php";
+?>
 <body>
     <h1>Clase 15 - CRUD con PHP</h1>
     <?php if($res == "agregado"): ?>
@@ -41,7 +35,7 @@ $res = $_GET["res"] ?? "";
         </article>
     <?php endforeach; ?>
     </section>
-    <section>
+    <section class="agregar-producto">
         <h2>Agregar producto</h2>
         <form class="form" action="guardar.php" method="POST">
             <label for="nombre">Nombre</label>
@@ -54,5 +48,3 @@ $res = $_GET["res"] ?? "";
         </form>
     </section>
 </main>
-</body>
-</html>
