@@ -2,6 +2,7 @@
     require "partials/header.php";
     require "partials/footer.php";
 ?>
+
 <body>
     <div class="form">
         <form action="controlers/singUpController.php" method="POST">
@@ -10,5 +11,4 @@
             <input type="text" name="rol" placeholder="admin/user">
             <button type="submit">Enviar</button>
         </form>
-</div>
-</body>
+    </div>

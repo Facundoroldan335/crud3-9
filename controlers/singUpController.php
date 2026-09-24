@@ -10,12 +10,16 @@ if ($usuario == "" || $password == "" || $rol == "") {
 
     echo "Los campos no deben estar vacíos";
 
+} elseif ($rol != "admin" && $rol != "user") {
+
+    echo "El rol debe ser admin o user";
+
 } else {
 
     $hashContrasenia = password_hash($password, PASSWORD_DEFAULT);
 
     $consulta = $conexion->prepare(
-        "INSERT INTO usuarios (usuario, contrasenia, rol) 
+        "INSERT INTO usuarios (usuario, contrasenia, rol)
         VALUES (:usuario, :contrasenia, :rol)"
     );
 
@@ -25,7 +29,7 @@ if ($usuario == "" || $password == "" || $rol == "") {
         ":rol" => $rol
     ]);
 
-    header("Location: ../index.php");
+    header("Location: ../login.php");
     exit();
 }
 

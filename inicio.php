@@ -2,7 +2,6 @@
 require "autenticar.php";
 
 $error = $_GET["error"] ?? "";
-
 ?>
 <?php require "header.php"; ?>
 

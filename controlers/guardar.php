@@ -1,6 +1,6 @@
 <?php
 
-require "conexion.php";
+require "../conexion.php";
 
 $nombre = $_POST['nombre'];
 $stock = (int)$_POST['stock'];
@@ -11,13 +11,14 @@ if(empty($nombre) || empty($stock) || empty($precio)) {
 }
 
 $consulta = $conexion->prepare("INSERT INTO productos (nombre, stock, precio) VALUES (:nombre, :stock, :precio)");
+
 $consulta->execute([
     ':nombre' => $nombre,
     ':stock' => $stock,
     ':precio' => $precio
 ]);
 
-header("Location: index.php?res=agregado");
+header("Location: ../index.php?res=agregado");
 exit;
 
 ?>
